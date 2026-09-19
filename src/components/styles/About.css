@@ -1,0 +1,200 @@
+/* ========================================
+   ABOUT SECTION
+======================================== */
+
+.about-section {
+  position: relative;
+  width: 100%;
+  min-height: 100vh;
+  padding: 140px 0 120px;
+  box-sizing: border-box;
+}
+
+
+/* MAIN CONTAINER */
+
+.about-container {
+  width: var(--cWidth, 85%);
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+
+/* ========================================
+   ABOUT TITLE
+======================================== */
+
+.about-container h2,
+.about-section h2 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 18px;
+  font-weight: 400;
+  letter-spacing: 8px;
+  text-transform: uppercase;
+  margin: 0 0 55px;
+  color: var(--accentColor);
+}
+
+
+/* ========================================
+   ABOUT CONTENT
+======================================== */
+
+.about-content {
+  max-width: 1000px;
+}
+
+
+/* MAIN ABOUT TEXT */
+
+.about-content p,
+.about-text {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+
+  font-size: clamp(32px, 4vw, 58px);
+
+  font-weight: 400;
+
+  line-height: 1.15;
+
+  letter-spacing: -1.5px;
+
+  color: #f2f2f2;
+
+  margin: 0;
+
+  max-width: 1000px;
+}
+
+
+/* ========================================
+   HIGHLIGHT TEXT
+======================================== */
+
+.about-content span,
+.about-text span {
+  color: var(--accentColor);
+}
+
+
+/* ========================================
+   EXTRA ABOUT INFO
+======================================== */
+
+.about-details {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 60px;
+  margin-top: 70px;
+}
+
+.about-details div {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.about-details h4 {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 12px;
+  font-weight: 400;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  color: #777;
+  margin: 0;
+}
+
+.about-details p {
+  font-family: "Helvetica Neue", Arial, sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  color: #ddd;
+  margin: 0;
+}
+
+
+/* ========================================
+   SUBTLE LINE
+======================================== */
+
+.about-content::after {
+  content: "";
+  display: block;
+
+  width: 100%;
+  height: 1px;
+
+  margin-top: 80px;
+
+  background: linear-gradient(
+    to right,
+    var(--accentColor),
+    transparent
+  );
+
+  opacity: 0.5;
+}
+
+
+/* ========================================
+   TABLET
+======================================== */
+
+@media only screen and (max-width: 1000px) {
+
+  .about-section {
+    padding: 110px 0 100px;
+  }
+
+  .about-container {
+    width: 85%;
+  }
+
+  .about-content p,
+  .about-text {
+    font-size: clamp(30px, 5vw, 48px);
+    line-height: 1.18;
+  }
+
+}
+
+
+/* ========================================
+   MOBILE
+======================================== */
+
+@media only screen and (max-width: 600px) {
+
+  .about-section {
+    min-height: auto;
+    padding: 90px 0 80px;
+  }
+
+  .about-container {
+    width: calc(100% - 40px);
+  }
+
+  .about-container h2,
+  .about-section h2 {
+    font-size: 14px;
+    letter-spacing: 5px;
+    margin-bottom: 40px;
+  }
+
+  .about-content p,
+  .about-text {
+    font-size: 28px;
+    line-height: 1.2;
+    letter-spacing: -0.5px;
+  }
+
+  .about-details {
+    gap: 30px;
+    margin-top: 50px;
+  }
+
+  .about-content::after {
+    margin-top: 60px;
+  }
+
+}
